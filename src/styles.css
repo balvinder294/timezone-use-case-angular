@@ -1,0 +1,16 @@
+/* Add application styles & imports to this file! */
+
+/* @import "~bootstrap/scss/bootstrap"; */
+
+@import "~bootstrap/dist/css/bootstrap.min.css";
+
+.footer {
+  padding-block-start: 20px;
+  padding-left: 10px;
+  padding-bottom: 5px;
+  background-color: #fcb4;
+  margin-top: auto;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}

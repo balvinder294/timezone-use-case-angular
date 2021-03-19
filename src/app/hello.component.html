@@ -1,0 +1,66 @@
+<div class="main">
+  <div class="container mt-2">
+    <div class="row">
+      <div class="col-12">
+        <h3>Local Date And UTC Date Conversion</h3>
+        <div class="card">
+          <div class="card-body bg-info text-white">
+            <p class="lead">This Code Gist contains code to show idea of how, dates conversion works and how dates can
+              be
+              formatted or
+              shown. Also example for displaying dates in UTC as well as ISO string, with custom timezone conversion</p>
+          </div>
+        </div>
+        <hr />
+      </div>
+      <div>
+
+        <h4>Current Date converted by Browser as default</h4>
+        <br />
+        <div class="row">
+          <div class="col-12">
+            <h5><b class="text-info">Local Date ISO :</b> {{ localDate }} </h5>
+
+            <h5><b class="text-primary">UTC Date ISO :</b> {{ utcDate }} </h5>
+
+            <h5><b class="text-primary">UTC Date as Zulu :</b> {{ utcDate.toJSON()}} </h5>
+          </div>
+        </div>
+
+        <hr />
+        <br />
+
+        <h3>Date in Custom Timezone</h3>
+        <hr />
+        <div class="row">
+          <div class="col-12">
+            <h4>Selected Custom Zone : <span class="text-info">{{zoneControl.value}}</span></h4>
+          </div>
+        </div>
+        <br />
+        <div class="row">
+          <div class="col-6">
+            <div class="form-group">
+              <select (click)="changeTimeZone(zoneControl.value)" [formControl]="zoneControl" class="form-control">
+              <option [value]="zone"*ngFor="let zone of timezones">{{zone | titlecase}}</option>
+            </select>
+            </div>
+          </div>
+          <div class="col-6">
+            <button type="button" class="btn btn-primary">Change Timezone</button>
+          </div>
+        </div>
+
+        <br />
+        <div class="row">
+          <div class="col-12">
+            <h5><b class="text-primary">Custom Zone Date UTC :</b> {{ defaultZoneDateISO }} </h5>
+            <h5><b class="text-primary">Custom Zone Date ISO :</b> {{ defaultZoneDateUTC }} </h5>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer bg-light text-dark">
+      <p>Visit <a href="https://tekraze.com">Tekraze.com</a> for helpful articles</p>
+    </div>
